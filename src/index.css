@@ -1,0 +1,17 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 640px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  .min-h-screen {
+    min-height: 80vh !important;
+  }
+}
