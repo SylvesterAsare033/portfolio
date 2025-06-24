@@ -30,7 +30,7 @@ const Projects = () => {
         My <span className="text-purple-500">Projects</span>
       </h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 gap-4 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-4 lg:grid-cols-4 sm:grid-cols-2 gap-4 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}

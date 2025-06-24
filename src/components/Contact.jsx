@@ -1,78 +1,87 @@
+// src/components/Contact.jsx
 import React from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section
-      className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-600 to-purple-500 py-16 px-4"
+      className="min-h-screen flex flex-col justify-center items-center bg-[#0F0F1E] text-white px-6"
       id="contact"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12 text-white drop-shadow">
-          Contact Me
-        </h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+        Get In <span className="text-purple-500">Touch</span>
+      </h2>
 
-        {/* Contact Form */}
-        <form className="space-y-6 bg-white/90 p-8 rounded-2xl shadow-2xl max-w-xl mx-auto backdrop-blur">
+      {/* Social Links */}
+      <div className="flex space-x-8 mb-12 text-3xl">
+        <a
+          href="https://github.com/yourgithub"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-purple-500 transition"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourlinkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-purple-500 transition"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://twitter.com/yourtwitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-purple-500 transition"
+        >
+          <FaTwitter />
+        </a>
+        <a
+          href="mailto:youremail@example.com"
+          className="hover:text-purple-500 transition"
+        >
+          <FaEnvelope />
+        </a>
+      </div>
+
+      {/* Contact Form */}
+      <form className="w-full max-w-xl space-y-6">
+        <div>
+          <label className="block mb-2 text-sm font-medium">Name</label>
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-50"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none"
           />
+        </div>
+
+        <div>
+          <label className="block mb-2 text-sm font-medium">Email</label>
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-50"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none"
           />
-          <textarea
-            placeholder="Your Message"
-            rows="4"
-            className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-50"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            Send Message
-          </button>
-        </form>
-
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6 mt-12 text-white text-2xl">
-          <a
-            href="mailto:youremail@example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors focus:outline-none focus:text-blue-200"
-          >
-            <FaEnvelope />
-          </a>
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors focus:outline-none focus:text-blue-200"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors focus:outline-none focus:text-blue-200"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors focus:outline-none focus:text-blue-200"
-          >
-            <FaTwitter />
-          </a>
         </div>
-      </div>
+
+        <div>
+          <label className="block mb-2 text-sm font-medium">Message</label>
+          <textarea
+            rows="5"
+            placeholder="Your Message"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded text-white font-semibold transition"
+        >
+          Send Message
+        </button>
+      </form>
     </section>
   );
 };

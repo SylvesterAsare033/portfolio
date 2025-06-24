@@ -87,7 +87,7 @@ const Experience = () => {
         My <span className="text-purple-500">Journey</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {/* Education Section */}
         <div>
           <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
